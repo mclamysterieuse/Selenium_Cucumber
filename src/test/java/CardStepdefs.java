@@ -6,7 +6,6 @@ import org.testng.Assert;
 public class CardStepdefs {
 
     private WebDriver driver = Hooks.driver;
-
     By cardSelectorBy = By.cssSelector("#shopping_cart_container > a");
     By productSelectorBy = By.cssSelector("#shopping_cart_container > a > span");
     By priceSelectorBy = By.cssSelector("div.item_pricebar > div");

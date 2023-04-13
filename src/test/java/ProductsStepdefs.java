@@ -7,9 +7,7 @@ import org.testng.Assert;
 public class ProductsStepdefs {
 
     private WebDriver driver = Hooks.driver;
-
     By ProductPageTitleBy = By.cssSelector("div.app_logo");
-
     By ProductPageAddBy = By.cssSelector("#add-to-cart-sauce-labs-backpack");
 
     @Then("je me connecte dans le site {string}")

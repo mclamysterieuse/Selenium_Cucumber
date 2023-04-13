@@ -13,7 +13,6 @@ public class LoginStepdefs {
     By passwordTextboxBy = By.cssSelector("#password");
     By loginButtonBy = By.cssSelector("#login-button");
     By secondErrorMessageBy = By.cssSelector("div.error-message-container.error > h3");
-
     By firstErrorMessageBy = By.cssSelector("div.error-message-container.error > h3");
 
 

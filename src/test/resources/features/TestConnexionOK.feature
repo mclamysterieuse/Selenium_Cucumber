@@ -9,10 +9,10 @@ Feature: Sauce Demo Test connexion ok
     And   je clique sur le bouton AddTocard
     And   je clique sur la card
     Then  je me connecte dans le site "Swag Labs"
-    And   Le nombre d'articles dans le panier est "1"
-    And   le prix de l'article est de "$29.99"
+    And   Le nombre d'articles dans le panier est "<expected_quantity>"
+    And   le prix de l'article est de "<expected_price>"
 
     Examples:
-      | login                   | mot_de_passe |
-      | standard_user           | secret_sauce |
-      | performance_glitch_user | secret_sauce |
+      | login                   | mot_de_passe |expected_quantity|expected_price|
+      | standard_user           | secret_sauce |     1           |$29.99        |
+      | performance_glitch_user | secret_sauce |     1           |$29.99        |
