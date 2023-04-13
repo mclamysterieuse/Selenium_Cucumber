@@ -1,6 +1,6 @@
 Feature: Cas non passants utilisateur non valide
 
-  @TESTKO
+  @POEI23-383
   Scenario Outline: Cas non passants utilisateur non valide
     Given je renseigne le lien de connexion du site Swag Labs "https://www.saucedemo.com/"
     When  je saisis le nom d'utilisateur "<login>"

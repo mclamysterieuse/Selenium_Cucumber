@@ -1,6 +1,6 @@
 Feature: Sauce Demo Test connexion ok
 
-  @TESTOK
+  @POEI23-363
   Scenario Outline: Sauce Demo Test connexion ok
     Given je renseigne le lien de connexion du site Swag Labs "https://www.saucedemo.com/"
     When  je saisis le nom d'utilisateur "<login>"

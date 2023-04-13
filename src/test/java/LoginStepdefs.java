@@ -27,7 +27,6 @@ public class LoginStepdefs {
         //ChromeOptions options = new ChromeOptions();
         //options.addArguments("--remote-allow-origins=*");
         //driver = new ChromeDriver(options);
-        Hooks.openBrowser();
         Hooks.driver.get(lien);
     }
 

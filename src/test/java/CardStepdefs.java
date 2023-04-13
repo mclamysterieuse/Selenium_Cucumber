@@ -1,30 +1,39 @@
 import cucumber.api.java.en.And;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 public class CardStepdefs {
 
     private WebDriver driver = Hooks.driver;
-    By cardSelectorBy = By.cssSelector("#shopping_cart_container > a");
-    By productSelectorBy = By.cssSelector("#shopping_cart_container > a > span");
-    By priceSelectorBy = By.cssSelector("div.item_pricebar > div");
 
+    @FindBy(css = "#shopping_cart_container > a")
+    public WebElement cardSelector;
+    @FindBy(css = "#shopping_cart_container > a > span")
+    public WebElement productSelector;
+    @FindBy(css = "div.item_pricebar > div")
+    public WebElement priceSelector;
+
+    public CardStepdefs() {
+        PageFactory.initElements(driver, this);
+    }
 
     @And("je clique sur la card")
     public void jeCliqueSurLaCard() {
-        driver.findElement(cardSelectorBy).click();
+        cardSelector.click();
     }
 
     @And("Le nombre d'articles dans le panier est {string}")
     public void leNombreDArticlesDansLePanierEst(String number) {
-        String actual_product = driver.findElement(productSelectorBy).getText();
+        String actual_product = productSelector.getText();
         Assert.assertEquals(number, actual_product);
     }
 
     @And("le prix de l'article est de {string}")
     public void lePrixDeLArticleEstDe(String price) {
-        String actual_price = driver.findElement(priceSelectorBy).getText();
+        String actual_price = priceSelector.getText();
         Assert.assertEquals(price, actual_price);
     }
 }
