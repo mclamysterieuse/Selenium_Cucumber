@@ -13,6 +13,7 @@ Feature: Sauce Demo Test connexion ok
     And   le prix de l'article est de "<expected_price>"
 
     Examples:
-      | login                   | mot_de_passe |expected_quantity|expected_price|
-      | standard_user           | secret_sauce |     1           |$29.99        |
-      | performance_glitch_user | secret_sauce |     1           |$29.99        |
+      | login                   | mot_de_passe |expected_quantity |expected_price|
+      | standard_user           | secret_sauce |     2           |$29.99        |
+      | performance_glitch_user | secret_sauce  |     2           |$29.99        |
+      | problem_user            | secret_sauce  | 2               | $29.99        |

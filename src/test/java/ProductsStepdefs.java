@@ -13,6 +13,9 @@ public class ProductsStepdefs {
     public WebElement productPageTitle;
     @FindBy(css = "#add-to-cart-sauce-labs-backpack")
     public WebElement productPageAdd;
+    @FindBy(css = "#add-to-cart-sauce-labs-onesie")
+    public WebElement product1PageAdd;
+
 
     public ProductsStepdefs() {
         PageFactory.initElements(driver, this);
@@ -27,5 +30,6 @@ public class ProductsStepdefs {
     @And("je clique sur le bouton AddTocard")
     public void jeCliqueSurLeBoutonAddTocard() {
         productPageAdd.click();
+        product1PageAdd.click();
     }
 }

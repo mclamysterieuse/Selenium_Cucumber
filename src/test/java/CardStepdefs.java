@@ -11,6 +11,7 @@ public class CardStepdefs {
 
     @FindBy(css = "#shopping_cart_container > a")
     public WebElement cardSelector;
+
     @FindBy(css = "#shopping_cart_container > a > span")
     public WebElement productSelector;
     @FindBy(css = "div.item_pricebar > div")
@@ -28,7 +29,7 @@ public class CardStepdefs {
     @And("Le nombre d'articles dans le panier est {string}")
     public void leNombreDArticlesDansLePanierEst(String number) {
         String actual_product = productSelector.getText();
-        Assert.assertEquals(number, actual_product);
+        Assert.assertEquals(number, actual_product, "le nombre n'est pas le même");
     }
 
     @And("le prix de l'article est de {string}")
